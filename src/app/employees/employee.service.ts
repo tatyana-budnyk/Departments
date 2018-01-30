@@ -15,7 +15,7 @@ export class EmployeeService {
 
     getEmployees(): Observable<Employee[]> {
         return this._http.get<Employee[]>(this._employeeUrl)
-            ._catch(this.handleError);
+            .catch(this.handleError);
     }
 
     private handleError(err: HttpErrorResponse) {
