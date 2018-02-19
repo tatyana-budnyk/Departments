@@ -31,7 +31,6 @@ export class EmployeeListComponent implements OnInit {
         this._departmentService.getDepartments()
             .subscribe(departments => this.department = departments.find(d => d.id === id));
     }
-
     onBack(): void {
         this._router.navigate(['/departments']);
     }
